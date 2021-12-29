@@ -1,4 +1,4 @@
-public enum PokemonTypeName {
+public enum PokemonTypeNames {
     Normal,
 	Fire,
     Grass,
