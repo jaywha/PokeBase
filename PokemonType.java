@@ -3,8 +3,8 @@ import java.util.List;
 
 public class PokemonType {
     public PokemonTypeNames Name;
-    public List<PokemonTypeNames> Weaknesses;
-    public List<PokemonTypeNames> Strengths;
+    public List<PokemonType> Weaknesses;
+    public List<PokemonType> Strengths;
 
     public PokemonType() {}
 
@@ -14,32 +14,62 @@ public class PokemonType {
         } catch (IllegalArgumentException iae) {
             this.Name = PokemonTypeNames.Normal;
         }
-        Weaknesses = new ArrayList<PokemonTypeNames>();
-        Strengths = new ArrayList<PokemonTypeNames>();
+        Weaknesses = new ArrayList<PokemonType>();
+        Strengths = new ArrayList<PokemonType>();
     }
 
-    public boolean addWeakness(String typeName) {
-        return Weaknesses.add(PokemonTypeNames.valueOf(typeName));
+    /**
+     * Attack of this type will be weak against a Pokemon of the given typeName
+     * @param typeName - The defender's type
+     * @return true - if typeName was added
+     */
+    public boolean addWeakness(PokemonType typeName) {
+        return Weaknesses.add(typeName);
     }
 
-    public boolean addStrengths(String typeName) {
-        return Strengths.add(PokemonTypeNames.valueOf(typeName));
+    /**
+     * Attack of this type will be strong against a Pokemon of the given typeName
+     * @param typeName - The defender's type
+     * @return success - if typeName was added
+     */
+    public boolean addStrengths(PokemonType typeName) {
+        return Strengths.add(typeName);
     }
 
-    public boolean removeWeakness(String typeName) {
-        return Weaknesses.remove(PokemonTypeNames.valueOf(typeName));
+    /**
+     * Attack of this type will be weak against a Pokemon of the given typeName
+     * @param typeName - The defender's type
+     * @return true - if typeName was removed
+     */
+    public boolean removeWeakness(PokemonType typeName) {
+        return Weaknesses.remove(typeName);
     }
 
-    public boolean removeStrengths(String typeName) {
-        return Strengths.remove(PokemonTypeNames.valueOf(typeName));
+    /**
+     * Attack of this type will be strong against a Pokemon of the given typeName
+     * @param typeName - The defender's type
+     * @return true - if typeName was removed
+     */
+    public boolean removeStrengths(PokemonType typeName) {
+        return Strengths.remove(typeName);
     }
 
-    public boolean isWeakAgainst(String typeName) {
-        return Weaknesses.contains(PokemonTypeNames.valueOf(typeName));
+    /**
+     * Attack of this type will be weak against a Pokemon of the given typeName
+     * @param typeName - The defender's type
+     * @return true - if typeName is in Weakness list
+     */
+    public boolean isWeakAgainst(PokemonType typeName) {
+        return Weaknesses.contains(typeName);
     }
 
-    public boolean isStrongAgainst(String typeName) {
-        return Strengths.contains(PokemonTypeNames.valueOf(typeName));
+    /**
+     * Attack of this type will be weak against a Pokemon of the given typeName
+     * @param typeName - The defender's type
+     * @return true - if typeName is in Strengths list
+     */
+    public boolean isStrongAgainst(PokemonType typeName) {
+        return Strengths.contains(typeName);
     }
 
     public String toString() {

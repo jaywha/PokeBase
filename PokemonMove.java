@@ -19,15 +19,15 @@ public class PokemonMove {
 
     public double getAttackModifier(Pokemon target) {
         double mod = 1.0;
-        if(moveType.isStrongAgainst(target.getPrimaryType().toString())) {
+        if(moveType.isStrongAgainst(target.getPrimaryType())) {
             mod *= 2.0;
-        } else if(moveType.isWeakAgainst(target.getPrimaryType().toString())) {
+        } else if(moveType.isWeakAgainst(target.getPrimaryType())) {
             mod /= 2.0;
         }
 
-        if(moveType.isStrongAgainst(target.getSecondaryType().toString())) {
+        if(moveType.isStrongAgainst(target.getSecondaryType())) {
             mod *= 2.0;
-        } else if(moveType.isWeakAgainst(target.getSecondaryType().toString())) {
+        } else if(moveType.isWeakAgainst(target.getSecondaryType())) {
             mod /= 2.0;
         }
 
