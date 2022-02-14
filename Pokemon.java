@@ -4,7 +4,11 @@ import java.util.Map;
 import javax.xml.crypto.dsig.keyinfo.KeyValue;
 
 public class Pokemon {
+    private String name;
+    private String nickName;
     private PokemonTrainer owner;
+
+    private int pokedexIndex;
     private int level;
     // TODO: Change from Object --> PokemonItem
     private Object heldItem;
@@ -25,18 +29,25 @@ public class Pokemon {
     }
 
     private void Init() {
-        // 1. Set initial moves
+        // 1. Set Name
+        name = "Pocket Monster";
+
+        // 2. Set initial moves
         moves = new HashMap<Integer, PokemonMove>();
 
-        // 2. Set type and level
+        // 3. Set type and level
         // type set in ctor
         level = 1;
 
-        // 3. Set owner (a trainer or wilderness)
+        // 4. Set owner (a trainer or wilderness)
         owner = new PokemonTrainer("wilderness");
 
-        // 4. Set held item
+        // 5. Set held item
         heldItem = null;
+    }
+
+    public String getName() {
+        return nickName == null || nickName.isEmpty() ? name : nickName;
     }
 
     public PokemonType getPrimaryType() {
