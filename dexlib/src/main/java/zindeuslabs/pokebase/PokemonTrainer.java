@@ -1,4 +1,4 @@
-import java.security.spec.PKCS8EncodedKeySpec;
+package zindeuslabs.pokebase;
 import java.util.HashMap;
 
 public class PokemonTrainer {

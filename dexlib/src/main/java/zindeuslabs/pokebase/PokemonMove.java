@@ -1,3 +1,4 @@
+package zindeuslabs.pokebase;
 public class PokemonMove {
     private PokemonType moveType;
     private int pokePowerMax;

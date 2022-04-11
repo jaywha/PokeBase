@@ -1,3 +1,4 @@
+package zindeuslabs.pokebase;
 public class JSONStringUtils {
     public static String asJSON(JSONTypes type, String label, String str) {
         StringBuilder sb = new StringBuilder();

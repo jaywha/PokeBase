@@ -1,3 +1,4 @@
+package zindeuslabs.pokebase;
 import java.util.HashMap;
 
 public class TypeDict {

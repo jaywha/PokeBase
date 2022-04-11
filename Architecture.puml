@@ -1,0 +1,9 @@
+@startuml Architecture
+class Pokemon {
+    PokemonType type
+}
+class PokemonMove {}
+class PokemonType {}
+
+Pokemon "1" *-- "6" PokemonMove : has
+@enduml

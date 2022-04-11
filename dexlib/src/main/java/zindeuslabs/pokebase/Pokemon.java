@@ -1,7 +1,6 @@
+package zindeuslabs.pokebase;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.xml.crypto.dsig.keyinfo.KeyValue;
 
 public class Pokemon {
     private String name;
@@ -69,5 +68,10 @@ public class Pokemon {
         moveList.append("{}"); // empty move for now
         moveList.append("]\r\n");
         return moveList.toString();
+    }
+
+    @Override
+    public String toString() {
+        return !nickName.isBlank() ? nickName+" ("+name+")" : name;
     }
 }

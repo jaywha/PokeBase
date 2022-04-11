@@ -1,3 +1,4 @@
+package zindeuslabs.pokebase;
 public enum PokemonTypeNames {
     Normal,
 	Fire,
