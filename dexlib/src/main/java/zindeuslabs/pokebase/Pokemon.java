@@ -7,6 +7,8 @@ public class Pokemon {
     private String nickName;
     private PokemonTrainer owner;
 
+    private int hitpoints;
+
     private int pokedexIndex;
     private int level;
     // TODO: Change from Object --> PokemonItem
@@ -49,12 +51,29 @@ public class Pokemon {
         return nickName == null || nickName.isEmpty() ? name : nickName;
     }
 
+    public void setName(String newName, boolean isNickName) {
+        if (isNickName) {
+            this.nickName = newName;
+        } else {
+            this.name = newName;
+        }
+    }
+
     public PokemonType getPrimaryType() {
         return this.mainType;
     }
 
+    public void setPrimaryType(String pokemonType) {
+        //TODO: Handle Types Better omg
+        this.mainType = new PokemonType(pokemonType);
+    }
+
     public PokemonType getSecondaryType() {
         return this.secondaryType;
+    }
+
+    public void adjustHP(int mod) {
+        this.hitpoints += mod;
     }
 
     public String getMoves() {
