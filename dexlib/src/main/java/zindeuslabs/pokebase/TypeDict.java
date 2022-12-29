@@ -24,7 +24,5 @@ public class TypeDict {
         // Add Weaknesses
         fire.addWeakness(water);
         fire.addWeakness(ground);
-
-        System.out.println(fire.generateReport());
     }
 }

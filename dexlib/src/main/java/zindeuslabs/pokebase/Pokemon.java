@@ -91,6 +91,6 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return !nickName.isBlank() ? nickName+" ("+name+")" : name;
+        return (nickName != null && !nickName.isBlank()) ? nickName+" ("+name+")" : name;
     }
 }

@@ -14,6 +14,10 @@ public class PokemonMove {
         this.power = attackPower;
     }
 
+    public int getMaxPokePower() {
+        return this.pokePowerMax;
+    }
+
     public int getCurrentPokePower() {
         return this.pokePowerCurrent;
     }

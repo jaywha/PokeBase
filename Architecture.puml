@@ -1,9 +1,14 @@
 @startuml Architecture
 class Pokemon {
-    PokemonType type
+    +mainType : PokemonType
+    +secondaryType : PokemonType
+    +moves : 
 }
-class PokemonMove {}
+class PokemonMove {
+    +primaryType : PokemonType
+}
 class PokemonType {}
 
 Pokemon "1" *-- "6" PokemonMove : has
+Pokemon "1" *-- "1..2" PokemonType : has
 @enduml

@@ -34,7 +34,7 @@ public class TeamMemberPopupController {
         p.setName(txtName.getText(), false);
         PokemonTransfer.dexNumber = Integer.parseInt(txtDexNumber.getText());
         PokemonTransfer.name = txtName.getText();
-        PokemonTransfer.type = PokemonTypeNames.valueOf(txtDexNumber.getText());
+        PokemonTransfer.type = PokemonTypeNames.valueOf(txtType.getText());
         PokemonTransfer.trainer = txtTrainer.getText();
         PokemonTransfer.heldItem = new Potion(p);
         PokemonTransfer.idNumber = Integer.parseInt(txtIDNumber.getText());
