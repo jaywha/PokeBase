@@ -11,8 +11,7 @@ public class Pokemon {
 
     private int pokedexIndex;
     private int level;
-    // TODO: Change from Object --> PokemonItem
-    private Object heldItem;
+    private PokemonItem heldItem;
 
     private PokemonType mainType;
     private PokemonType secondaryType;
