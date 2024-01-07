@@ -1,0 +1,26 @@
+.tab-header-background {
+    -fx-background-color: darkcyan;
+}
+
+.tab-header-foreground {
+    -fg-foreground-color: white;
+}
+
+.tab:hover {
+    -fx-color: -fx-hover-base;
+}
+
+.tab:selected {
+    -fx-background-color: -fx-tab-border-color, -fx-control-inner-background;    
+    -fx-background-insets: 0, 1 1 0 1;
+    -fx-background-radius: 5 5 0 0, 4 4 0 0;
+}
+
+.tab:disabled {
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+.tab:disabled:hover {
+    -fx-color: -fx-base;
+    -fx-opacity: -fx-disabled-opacity;
+}
